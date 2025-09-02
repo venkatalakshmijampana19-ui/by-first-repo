@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>City Center Mall</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: #111;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .content {
+      padding: 2em;
+    }
+    .stores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .store {
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .store img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>City Center Mall</h1>
+    <p>Your one-stop destination for shopping & fun</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Stores</a>
+    <a href="#">Dining</a>
+    <a href="#">Events</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <div>Welcome to City Center Mall</div>
+  </div>
+
+  <div class="content">
+    <h2>Featured Stores</h2>
+    <div class="stores">
+      <div class="store">
+        <img src="https://via.placeholder.com/250x150" alt="Store 1" />
+        <h3>Zara</h3>
+        <p>Trendy fashion for men and women.</p>
+      </div>
+      <div class="store">
+        <img src="https://via.placeholder.com/250x150" alt="Store 2" />
+        <h3>Apple Store</h3>
+        <p>Latest Apple gadgets and accessories.</p>
+      </div>
+      <div class="store">
+        <img src="https://via.placeholder.com/250x150" alt="Store 3" />
+        <h3>Starbucks</h3>
+        <p>Coffee, snacks, and a cozy space to relax.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 City Center Mall. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
