@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Super Cars Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      margin: 0;
+      color: #fff;
+    }
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .car-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .car-name {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+    }
+    .car-details {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>Super Cars Dashboard</header>
+  <div class="dashboard" id="dashboard-container">
+    <!-- Super car cards will be inserted here -->
+  </div>
+  <footer>&copy; 2025 Super Cars Inc.</footer>
+
+  <script>
+    const superCars = [
+      {
+        name: "Lamborghini Aventador",
+        model: "2019",
+        horsepower: "730 HP",
+        image: "https://images.unsplash.com/photo-1606200988637-87ed1d0d2745?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Ferrari SF90",
+        model: "2020",
+        horsepower: "986 HP",
+        image: "https://images.unsplash.com/photo-1591526750967-2d93c13f86b1?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "Bugatti Chiron",
+        model: "2018",
+        horsepower: "1500 HP",
+        image: "https://images.unsplash.com/photo-1608363307413-8266bfa786f0?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        name: "McLaren 720S",
+        model: "2021",
+        horsepower: "720 HP",
+        image: "https://images.unsplash.com/photo-1621834651867-7b68e6598f2b?ixlib=rb-4.0.1&auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    const container = document.getElementById('dashboard-container');
+
+    superCars.forEach(car => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <img src="${car.image}" alt="${car.name}" class="car-image"/>
+        <div class="card-content">
+          <h3 class="car-name">${car.name}</h3>
+          <div class="car-details">Model: ${car.model}</div>
+          <div class="car-details">Horsepower: ${car.horsepower}</div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
